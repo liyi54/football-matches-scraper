@@ -10,6 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+First, ensure [Python 3.7+](https://www.python.org/downloads/) is installed on your local machine.
+
+Then install the following packages
+
 ```
 beautifulsoup4==4.9.1
 lxml==4.5.1

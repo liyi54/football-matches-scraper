@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 page_count = 1
 prefix = "https://footballia.net"
-player_full_name = "Cristiano Ronaldo dos Santos Aveiro"
+player_full_name = "Cristiano Ronaldo dos Santos Aveiro"  # The complete full name of the player is required
 url_name = "-".join(player_full_name.split(" "))
 
 with open('matches.txt', 'w+') as file:
@@ -12,7 +12,7 @@ with open('matches.txt', 'w+') as file:
 
 
 while True:
-    url = "https://footballia.net/players/" + url_name + "?mode=player&page=" +str(page_count)
+    url = "https://footballia.net/players/" + url_name + "?mode=player&page=" + str(page_count)
     getUrl = PoolManager().request('GET', url).data
     soup = BeautifulSoup(getUrl, "lxml")
 
